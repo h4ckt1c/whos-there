@@ -1,3 +1,4 @@
+<?php require_once("reset-password.php"); ?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -20,7 +21,7 @@
         </form>
     </div>
     <?php
-        if(isset($_POST['password']) && $_POST['password'] == "foobar") {
+        if(isset($_POST['password']) && $_POST['password'] == $password) {
             fclose(fopen("user.txt", "w"));
             header('Location: index.php');
         }
