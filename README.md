@@ -32,26 +32,32 @@ and the timestamp is stored comma seperated in guys.txt
 ### Usage
 - Click on your name (if not logged in), enter your pin and _you're there_
 - To reset presence of guys:
-    - visit `document_root/reset.php`, enter password (see optional step in Installation) OR
+    - visit `document__root/reset.php`, enter password (see optional step in Installation) OR
     - create a cronjob executing `/bin/sh -c ">/path/to/guys.txt"`
 
 ### Screenshots
 
 ----
-![](screenshots/Whos-There-Screenshot-1.png?raw=true)
-Overview (nobodys _there_, nobodys logged in
+Overview (nobodys _there_, nobodys logged in:
+!["alt-text"][screenshot1]
 ----
-![](screenshots/Whos-There-Screenshot-2.png?raw=true)
-*h4ckt1c* logged in and *h4ckt1c*'s there
+*h4ckt1c* logged in and *h4ckt1c*'s there:
+!["alt-text"][screenshot2]
 ----
-![](screenshots/Whos-There-Screenshot-3.png?raw=true)
-*h4ckt1c* logged in, but nobody's there
+*h4ckt1c* logged in, but nobody's there:
+!["alt-text"][screenshot3]
 ----
-![](screenshots/Whos-There-Screenshot-4.png?raw=true)
-resetting presece using web-frontend
+resetting presece using web-frontend:
+!["alt-text"][screenshot4]
 ----
 
 ## TODO:
 - Write Readme
 - Make screenshots
 - Add Copyright / License
+
+
+[screenshot1]: screenshots/Whos-There-Screenshot-1.png?raw=true "alt text"
+[screenshot2]: screenshots/Whos-There-Screenshot-2.png?raw=true "alt text"
+[screenshot3]: screenshots/Whos-There-Screenshot-3.png?raw=true "alt text"
+[screenshot4]: screenshots/Whos-There-Screenshot-4.png?raw=true "alt text"
