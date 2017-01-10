@@ -36,14 +36,20 @@ and the timestamp is stored comma seperated in guys.txt
     - create a cronjob executing `/bin/sh -c ">/path/to/guys.txt"`
 
 ### Screenshots
-[![](screenshots/Whos-There-Screenshot-1.png?raw=true)]
 
-[![](screenshots/Whos-There-Screenshot-2.png?raw=true)]
-
-[![](screenshots/Whos-There-Screenshot-3.png?raw=true)]
-
-[![](screenshots/Whos-There-Screenshot-4.png?raw=true)]
-
+----
+![](screenshots/Whos-There-Screenshot-1.png?raw=true)
+Overview (nobodys _there_, nobodys logged in
+----
+![](screenshots/Whos-There-Screenshot-2.png?raw=true)
+*h4ckt1c* logged in and *h4ckt1c*'s there
+----
+![](screenshots/Whos-There-Screenshot-3.png?raw=true)
+*h4ckt1c* logged in, but nobody's there
+----
+![](screenshots/Whos-There-Screenshot-4.png?raw=true)
+resetting presece using web-frontend
+----
 
 ## TODO:
 - Write Readme
