@@ -22,7 +22,7 @@
     </div>
     <?php
         if(isset($_POST['password']) && $_POST['password'] == $password) {
-            fclose(fopen("user.txt", "w"));
+            fclose(fopen("guys.txt", "w"));
             header('Location: index.php');
         }
     ?>

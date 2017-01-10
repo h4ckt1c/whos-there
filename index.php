@@ -13,8 +13,9 @@
 <body>
 <?php
     function ist_da($user) {
-        if(strpos(file_get_contents("user.txt"), $user) === false) {
-            file_put_contents("user.txt", $user . "\n", FILE_APPEND);
+        if(strpos(file_get_contents("guys.txt"), $user) === false) {
+            $cont = $user . "," . date("H:i");
+            file_put_contents("guys.txt", $cont . "\n", FILE_APPEND);
         }
     }
     function verify_cookie($pins) {
@@ -59,7 +60,7 @@
 
     */
     require_once("users.php");
-    $im_dienst = file_get_contents("user.txt");
+    $im_dienst = file_get_contents("guys.txt");
 
     $loginform = false;
     if(isset($_COOKIE['usr'])) {
@@ -89,14 +90,14 @@
     <div class="container">
         <div class="page-header">
             <h1>Who's there?!</h1>
-            <h3><?php echo count(file("user.txt")) . " von " . count($pins); ?></h3>
+            <h3><?php echo count(file("guys.txt")) . " von " . count($pins); ?></h3>
         </div>
         <form method="post">
         <?php
         if(isset($_COOKIE['usr'])) {
             $user = $_COOKIE['usr'];;
             $msg = $user . " is there";
-            echo "<input style=\"width: 120px; margin: 5px;\" name=\"user\" type=\"submit\" class=\"btn btn-primary\" value=\"$user\">'s there</input><br>\n";
+            echo "<input style=\"width: 120px; margin: 5px;\" name=\"user\" type=\"submit\" class=\"btn btn-primary\" value=\"$user\">'s there<br>\n";
         echo "</form>";
         echo "<hr>";
         }
@@ -105,13 +106,20 @@
         <p>
         <?php
             $i = 1;
-            foreach($pins as $soldat => $pin) {
-                if(strpos(file_get_contents("user.txt"), $soldat) !== false)
+            foreach($pins as $guy => $pin) {
+                if(strpos(file_get_contents("guys.txt"), $guy) !== false) {
+                    if(preg_match("/$guy,.*/", file_get_contents("guys.txt"), $match)) {
+                        $timestamp = explode(",", $match[0])[1];
+                    }
                     $class ="btn-success";
-                else
+                }
+                else {
                     $class = "btn-danger";
-                $br = ($i % 2 == 0) ? "<br>" : null;
-                echo "<input style='width: 120px; margin: 5px;' name='user' type='submit' class='btn $class' value='$soldat'></input>$br\n";
+                    $timestamp = null;
+                }
+#                 $br = ($i % 2 == 0) ? "<br>" : null;
+                $br = "<span>$timestamp</span><br>";
+                echo "<input style='width: 120px; margin: 5px;' name='user' type='submit' class='btn $class' value='$guy'>$br\n";
                 $i++;
             }
             echo "</form>";
