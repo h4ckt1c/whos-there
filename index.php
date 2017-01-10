@@ -161,13 +161,11 @@
             </form>
             <?php } ?>
     </div>
-    <div class="container">
+    <footer class="footer">
+        <div class="container">
         <p>
             The source code is available on <a href="https://github.com/h4ckt1c/whos-there">GitHub</a>.
         </p>
-    </div>
-    <footer class="footer">
-        <div class="container">
         <p>
             Contact: <a href="https://twitter.com/h4ckt1c">@h4ckt1c</a> | <a href="mailto:h@ckerbu.de">h@ckerbu.de</a>
         </p>

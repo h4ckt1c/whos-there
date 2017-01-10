@@ -1,6 +1,6 @@
 # Who's there?!
 
-I wrote this tool because I had to confirm the presence of a group of people. To do this,
+I wrote this tool because I had to confirm (every day!) the presence of a group of people. To do this,
 everyone can click on his name after _login_, so he can confirm his presence and in the overview
 his name comes green.
 
@@ -28,11 +28,18 @@ $ echo '<?php $password = "myresetpassword"; ?>' > reset-password.php
 and the timestamp is stored comma seperated in guys.txt
 - If user _logs in_, a cookie storing _usr_ and _pin_ value is placed to remember the user
 - Logout button removes _usr_ and _pin_ cookie
+
 ### Usage
 - Click on your name (if not logged in), enter your pin and _you're there_
 - To reset presence of guys:
     - visit `document_root/reset.php`, enter password (see optional step in Installation) OR
     - create a cronjob executing `/bin/sh -c ">/path/to/guys.txt"`
+
+### Screenshots
+[![](screenshots/Whos-There-Screenshot-1.png?raw=true)]
+[![](screenshots/Whos-There-Screenshot-2.png?raw=true)]
+[![](screenshots/Whos-There-Screenshot-3.png?raw=true)]
+[![](screenshots/Whos-There-Screenshot-4.png?raw=true)]
 
 ## TODO:
 - Write Readme
