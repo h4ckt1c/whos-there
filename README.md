@@ -13,6 +13,7 @@ I wanted to keep it flexible, so the requirements are not that much:
 ```bash
 $ cd /var/www/html  # or whatever document root
 $ git clone https://github.com/h4ckct1c/whos-there
+$ cd whos-there
 $ chown -R www-data:www-data .  # or whatever user php is running
 $ echo '<?php $pins = [ "user1" => "1337", "user2" => "1338"]; ?>' > users.php
 // optional:
